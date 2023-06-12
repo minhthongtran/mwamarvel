@@ -1,0 +1,19 @@
+<form class="login-form" (ngSubmit)="login()">
+  <fieldset>
+    <p *ngIf="loginSucceed" class="text-success">{{successMessage}}</p>
+    <p *ngIf="loginFailed" class="text-warning">{{errorMessage}}</p>
+    <legend>Sign In</legend>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="form-label mt-4">Username</label>
+      <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Username" name = "username" [(ngModel)]="username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+      <input type="password" class="form-control" name="password" placeholder="Password " name = "password" [(ngModel)]="password">
+    </div>
+    <div class="form-group">
+      <div><button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button></div>
+      <div><button class="btn btn-outline-light" routerLink="/register">Create New Account</button></div>
+    </div>
+  </fieldset>
+</form>

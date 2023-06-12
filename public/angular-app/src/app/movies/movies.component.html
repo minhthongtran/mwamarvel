@@ -1,0 +1,18 @@
+<div class="movies-content">
+  <div *ngFor="let movie of movies"><div class="movie-content"><img src="../../assets/images/{{movie._id}}.png" routerLink="/movies/{{movie._id}}" alt=""></div><div><a routerLink="/movies/{{movie._id}}">{{movie.name}}</a></div><p>Release: {{movie.release}}</p></div>
+</div>
+<div class="pagination-content">
+  <!-- <ul class="pagination pagination-lg">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" (click)="display(-1)">&laquo;</a>
+    </li>
+    <li *ngFor="let p of pageCount; let i = index" class="page-item active">
+      <a class="page-link" href="#">{{i + 1}}</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#" (click)="display(1)">&raquo;</a>
+    </li>
+  </ul> -->
+  <div><button class="btn btn-secondary my-2 my-lg-0" (click) = "display(-1)">&laquo;</button>
+  <button class="btn btn-secondary my-2 my-lg-0" (click) = "display(1)">&raquo;</button></div>
+</div>

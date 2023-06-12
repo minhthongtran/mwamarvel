@@ -1,0 +1,21 @@
+<form>
+  <select name="pageCount" [(ngModel)]="pageCount" (change)="pageCountChanged()">
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+ </select>
+ <select name="state" [(ngModel)]="state" (change)="stateChanged()">
+  <option value="">All</option>
+  <option value="Nevada">Nevada</option>
+  <option value="Fairfield">Fairfield</option>
+</select>
+ <input type="radio" value="5" name="five" [(ngModel)]="five">
+ <input type="radio" value="10" name="ten" [(ngModel)]="ten">
+ <input type="radio" value="15" name="fifteen" [(ngModel)]="fifteen">
+</form>
+<ul>
+  <li *ngFor="let job of jobs">{{job.title}} - {{job.salary | currency}} - {{job.location.name}} - {{job.postDate | date}} - {{job.postDate | date:'MMM, y'}}</li>
+</ul>
+
+<div><button [disabled]="previousDisabled" class="btn btn-secondary my-2 my-lg-0" (click) = "display(-1)">&laquo;</button>
+  <button  [disabled]="nextDisabled" class="btn btn-secondary my-2 my-lg-0" (click) = "display(1)">&raquo;</button></div>

@@ -1,0 +1,20 @@
+<form class="register-form">
+  <fieldset>
+    <legend>Register New Account</legend>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="form-label mt-4">Name</label>
+      <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Name" name = "name" [(ngModel)]="user.name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="form-label mt-4">Username</label>
+      <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Username" name = "username" [(ngModel)]="user.username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+      <input type="password" class="form-control" name="password" placeholder="Password " name = "password" [(ngModel)]="user.password">
+    </div>
+    <div class="form-group">
+      <div><button class="btn btn-primary" type="submit" (click)="register()">Register</button></div>
+    </div>
+  </fieldset>
+</form>
